@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,6 +12,7 @@
             <connections>
                 <outlet property="addToBag" destination="5WZ-mi-H12" id="hLf-Vy-2au"/>
                 <outlet property="backButton" destination="aHZ-3w-5uS" id="YdV-Jv-We7"/>
+                <outlet property="bookMarkView" destination="fm0-Tc-rPd" id="rCc-QG-KYu"/>
                 <outlet property="detailContentView" destination="ySf-Ta-N5a" id="YY1-KI-Js6"/>
                 <outlet property="originalPrice" destination="B5u-LW-ndM" id="aNj-4h-6ob"/>
                 <outlet property="price" destination="tOO-ZY-pi0" id="IyF-ZL-4a4"/>
@@ -35,7 +37,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="badges" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3co-P6-AYX">
-                                    <rect key="frame" x="8" y="66" width="398" height="14.5"/>
+                                    <rect key="frame" x="20" y="66" width="386" height="14.5"/>
                                     <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="12"/>
                                     <nil key="textColor"/>
@@ -86,8 +88,8 @@
                                         <constraint firstAttribute="width" constant="45" id="a2p-wZ-gcQ"/>
                                     </constraints>
                                     <color key="tintColor" systemColor="labelColor"/>
-                                    <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="arrow.left" catalog="system"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="arrow.left" catalog="system"/>
                                 </button>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tagMark" translatesAutoresizingMaskIntoConstraints="NO" id="fm0-Tc-rPd">
                                     <rect key="frame" x="381" y="35" width="25" height="25"/>
@@ -99,12 +101,13 @@
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WZ-mi-H12">
                                     <rect key="frame" x="20" y="640" width="374" height="50"/>
+                                    <color key="backgroundColor" systemColor="labelColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="teK-JM-vN0"/>
                                     </constraints>
-                                    <color key="tintColor" systemColor="labelColor"/>
+                                    <color key="tintColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="filled" title="ADD TO BAG"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="ADD TO BAG"/>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,7 +123,7 @@
                                 <constraint firstItem="3co-P6-AYX" firstAttribute="top" secondItem="aHZ-3w-5uS" secondAttribute="bottom" constant="1" id="Ukh-NI-jbJ"/>
                                 <constraint firstItem="tOO-ZY-pi0" firstAttribute="top" secondItem="f6G-lC-fIa" secondAttribute="bottom" constant="2" id="XUD-2A-Jop"/>
                                 <constraint firstItem="f5X-td-AIp" firstAttribute="leading" secondItem="ySf-Ta-N5a" secondAttribute="leading" constant="8" id="ZWX-xl-SLN"/>
-                                <constraint firstItem="3co-P6-AYX" firstAttribute="leading" secondItem="ySf-Ta-N5a" secondAttribute="leading" constant="8" id="arm-GG-DCQ"/>
+                                <constraint firstItem="3co-P6-AYX" firstAttribute="leading" secondItem="ySf-Ta-N5a" secondAttribute="leading" constant="20" id="arm-GG-DCQ"/>
                                 <constraint firstItem="3co-P6-AYX" firstAttribute="top" secondItem="fm0-Tc-rPd" secondAttribute="bottom" constant="6" id="eCr-hE-MhI"/>
                                 <constraint firstItem="fm0-Tc-rPd" firstAttribute="top" secondItem="ySf-Ta-N5a" secondAttribute="top" constant="35" id="fc5-tW-qMs"/>
                                 <constraint firstItem="3co-P6-AYX" firstAttribute="top" secondItem="aHZ-3w-5uS" secondAttribute="bottom" constant="1" id="hry-Rj-Kv2"/>

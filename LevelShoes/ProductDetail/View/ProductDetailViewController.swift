@@ -21,6 +21,7 @@ class ProductDetailViewController: UIViewController {
     @IBOutlet weak var originalPrice: UILabel!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var addToBag: UIButton!
+    @IBOutlet weak var bookMarkView: UIImageView!
     
     // MARK: - Private Properties
     private let viewModel = ProductDetailViewModel()
@@ -29,9 +30,8 @@ class ProductDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureBackButton()
-        configureCartButton()
         setupUI()
+        setupFavoriteAction()
         setupData()
     }
     
@@ -58,7 +58,7 @@ extension ProductDetailViewController {
     }
     
     @objc func backButtonAction(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func configureCartButton() {
@@ -73,10 +73,28 @@ extension ProductDetailViewController {
             showAlert(title: "Oops!", message: "You already have this product in cart.")
         }
     }
+    
+    private func setupFavoriteAction() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(favoriteProduct))
+        self.bookMarkView.isUserInteractionEnabled = true
+        self.bookMarkView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func favoriteProduct(_ tapGestureRecognizer: UITapGestureRecognizer) {
+        DispatchQueue.main.async {
+            let controller = WishListViewController()
+            let navigationController = UINavigationController(rootViewController: controller)
+            navigationController.modalPresentationStyle = .fullScreen
+            self.present(navigationController, animated: true)
+        }
+    }
 }
 
 extension ProductDetailViewController {
     func setupUI() {
+        configureBackButton()
+        configureCartButton()
+        
         self.spinner.hidesWhenStopped = true
         self.detailContentView.addSubview(spinner)
         spinner.translatesAutoresizingMaskIntoConstraints = false
@@ -107,8 +125,9 @@ extension ProductDetailViewController {
                 self.originalPrice.isHidden = true
             }
             let url = URL(string: self.product.image)
+            let imagePlaceholder = UIImage(named: "placeholder")
             self.productImageView.kf.setImage(with: url,
-                                              placeholder: nil,
+                                              placeholder: imagePlaceholder,
                                               options: nil,
                                               progressBlock: nil,
                                               completionHandler: nil)

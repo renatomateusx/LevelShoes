@@ -31,7 +31,19 @@ struct Utilis {
         if let dataProducts = userDefaults.object(forKey: Constants.favoritesKey) as? Data {
             return decodeProducts(products: dataProducts)
         }
-        return nil
+        return []
+    }
+    
+    static func removeFromFavorites(product: Product) -> Bool {
+        if var favorites = getFavorites() {
+            if let productIndexToRemove = favorites.firstIndex(where: { $0.id == product.id }) {
+                favorites.remove(at: productIndexToRemove)
+                let encodecFavoritesProducts = encodeProducts(products: favorites)
+                userDefaults.set(encodecFavoritesProducts, forKey: Constants.favoritesKey)
+                return true
+            }
+        }
+        return false
     }
     
     private static func decodeProducts(products: Data) -> Products {
@@ -61,7 +73,8 @@ extension Utilis {
     }
     
     static func getPrice(price: Int) -> String {
-        return "\(price.formatted(.currency(code: ""))) AED"
+        let result = NumberFormatter.localizedString(from: price as NSNumber, number: .currency)
+        return "\(result) AED"
     }
     
     static func getCanceledPrice(priceText: String) -> NSAttributedString? {
@@ -103,6 +116,6 @@ extension Utilis {
         if let dataCartProducts = userDefaults.object(forKey: Constants.cartKey) as? Data {
             return decodeProducts(products: dataCartProducts)
         }
-        return nil
+        return []
     }
 }

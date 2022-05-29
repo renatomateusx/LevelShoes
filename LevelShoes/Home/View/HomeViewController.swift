@@ -93,15 +93,6 @@ extension HomeViewController: HomeViewModelDelegate {
         self.topBookmarkImageView.isUserInteractionEnabled = true
         self.topBookmarkImageView.addGestureRecognizer(tapGesture)
     }
-    
-    /// I could have a coordination class to coordinate the navigation for this screen, since we have it triggered from more than 1 place.
-    @objc func navigateToWishList(_ sender: UITapGestureRecognizer) {
-        DispatchQueue.main.async {
-            let controller = WishListViewController()
-            let navigationController = UINavigationController(rootViewController: controller)
-            self.present(navigationController, animated: true, completion: nil)
-        }
-    }
 }
 
 // MARK: - CollectionViewDataSource
@@ -169,12 +160,29 @@ private extension HomeViewController {
 }
 
 // MARK: - Selection Movie
+/// This could be inside a coordinate because sometime we'll need to go to this new screen from more than one place.
 extension HomeViewController {
     func selectProduct(_ product: Product) {
         DispatchQueue.main.async {
-            let controller = ProductDetailViewController(with: product)
+            let productDetailController = ProductDetailViewController(with: product)
+            self.navigationController?.pushViewController(productDetailController, animated: true)
+        }
+    }
+    
+    /// I could have a coordination class to coordinate the navigation for this screen, since we have it triggered from more than 1 place.
+    @objc func navigateToWishList(_ sender: UITapGestureRecognizer) {
+        DispatchQueue.main.async {
+            let controller = WishListViewController()
+            controller.delegate = self
             let navigationController = UINavigationController(rootViewController: controller)
+            navigationController.modalPresentationStyle = .fullScreen
             self.present(navigationController, animated: true, completion: nil)
         }
+    }
+}
+
+extension HomeViewController: WishListViewControllerDelegate {
+    func didRemoveFavoriteItem() {
+        self.collectionView.reloadData()
     }
 }

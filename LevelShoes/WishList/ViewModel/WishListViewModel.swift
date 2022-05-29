@@ -8,6 +8,10 @@
 import Foundation
 
 class WishListViewModel {
-    let favoriteList = Utilis.getFavorites()
+    var favoriteList = Utilis.getFavorites()
     
+    
+    func updateList() {
+        favoriteList = Utilis.getFavorites()
+    }
 }
