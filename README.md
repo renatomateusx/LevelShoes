@@ -6,7 +6,7 @@ Project made as a challenge for LevelShoes
 KingFisher<br/>
 URLSession<br/>
 Unit Tests<br/>
-UI Tests - Pending <br/>
+UI Tests<br/>
 SwiftLint<br/>
 
 # Preview
