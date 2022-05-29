@@ -13,10 +13,10 @@ target 'LevelShoes' do
     # Pods for testing
   end
 
-  target 'LevelShoesUITests' do
+  #target 'LevelShoesUITests' do
     # Pods for testing
-    pod 'SnapshotTesting', '~> 1.8.1'
-    pod 'Kingfisher', '~> 4.0'
-  end
+  #  pod 'SnapshotTesting', '~> 1.8.1'
+  #  pod 'Kingfisher', '~> 4.0'
+  #end
 
 end
