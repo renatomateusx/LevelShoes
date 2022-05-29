@@ -13,7 +13,6 @@
 		30144E6128423D6E00BDF19A /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30144E6028423D6E00BDF19A /* WishListViewModel.swift */; };
 		30144E6528423EFC00BDF19A /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30144E6328423EFC00BDF19A /* ProductTableViewCell.swift */; };
 		30144E6628423EFC00BDF19A /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30144E6428423EFC00BDF19A /* ProductTableViewCell.xib */; };
-		3036F6D62843A7FD00F162AD /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3036F6D52843A7FD00F162AD /* HomeViewControllerTests.swift */; };
 		3036F6D82843A92000F162AD /* WishListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3036F6D72843A92000F162AD /* WishListService.swift */; };
 		3062EB0D28418C3300307807 /* Utilis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3062EB0C28418C3300307807 /* Utilis.swift */; };
 		307421EC28410EFD00A2554B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307421EB28410EFD00A2554B /* AppDelegate.swift */; };
@@ -41,13 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3036F6CE2843A7AE00F162AD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 307421E028410EFD00A2554B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 307421E728410EFD00A2554B;
-			remoteInfo = LevelShoes;
-		};
 		307421FF28410EFE00A2554B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 307421E028410EFD00A2554B /* Project object */;
@@ -67,8 +59,6 @@
 		30144E6028423D6E00BDF19A /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		30144E6328423EFC00BDF19A /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		30144E6428423EFC00BDF19A /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
-		3036F6C82843A7AE00F162AD /* LevelShoesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LevelShoesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3036F6D52843A7FD00F162AD /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		3036F6D72843A92000F162AD /* WishListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WishListService.swift; path = LevelShoesUITests/Home/WishListService.swift; sourceTree = SOURCE_ROOT; };
 		3062EB0C28418C3300307807 /* Utilis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilis.swift; sourceTree = "<group>"; };
 		307421E828410EFD00A2554B /* LevelShoes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LevelShoes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,13 +95,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3036F6C52843A7AE00F162AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		307421E528410EFD00A2554B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,22 +169,6 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
-		3036F6C92843A7AE00F162AD /* LevelShoesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3036F6D32843A7B400F162AD /* Home */,
-			);
-			path = LevelShoesUITests;
-			sourceTree = "<group>";
-		};
-		3036F6D32843A7B400F162AD /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				3036F6D52843A7FD00F162AD /* HomeViewControllerTests.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
 		3062EB0B28418C2400307807 /* Utilis */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +208,6 @@
 			children = (
 				307421EA28410EFD00A2554B /* LevelShoes */,
 				3074220128410EFE00A2554B /* LevelShoesTests */,
-				3036F6C92843A7AE00F162AD /* LevelShoesUITests */,
 				307421E928410EFD00A2554B /* Products */,
 				DCA10FD729FC9C2F37025D64 /* Pods */,
 				2E7F169F6D0E410B5503BF99 /* Frameworks */,
@@ -253,7 +219,6 @@
 			children = (
 				307421E828410EFD00A2554B /* LevelShoes.app */,
 				307421FE28410EFE00A2554B /* LevelShoesTests.xctest */,
-				3036F6C82843A7AE00F162AD /* LevelShoesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,24 +365,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3036F6C72843A7AE00F162AD /* LevelShoesUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3036F6D22843A7AE00F162AD /* Build configuration list for PBXNativeTarget "LevelShoesUITests" */;
-			buildPhases = (
-				3036F6C42843A7AE00F162AD /* Sources */,
-				3036F6C52843A7AE00F162AD /* Frameworks */,
-				3036F6C62843A7AE00F162AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3036F6CF2843A7AE00F162AD /* PBXTargetDependency */,
-			);
-			name = LevelShoesUITests;
-			productName = LevelShoesUITests;
-			productReference = 3036F6C82843A7AE00F162AD /* LevelShoesUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		307421E728410EFD00A2554B /* LevelShoes */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3074221228410EFE00A2554B /* Build configuration list for PBXNativeTarget "LevelShoes" */;
@@ -466,11 +413,6 @@
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					3036F6C72843A7AE00F162AD = {
-						CreatedOnToolsVersion = 13.3;
-						LastSwiftMigration = 1330;
-						TestTargetID = 307421E728410EFD00A2554B;
-					};
 					307421E728410EFD00A2554B = {
 						CreatedOnToolsVersion = 13.3;
 					};
@@ -495,19 +437,11 @@
 			targets = (
 				307421E728410EFD00A2554B /* LevelShoes */,
 				307421FD28410EFE00A2554B /* LevelShoesTests */,
-				3036F6C72843A7AE00F162AD /* LevelShoesUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3036F6C62843A7AE00F162AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		307421E628410EFD00A2554B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -596,14 +530,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3036F6C42843A7AE00F162AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3036F6D62843A7FD00F162AD /* HomeViewControllerTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		307421E428410EFD00A2554B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -642,11 +568,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3036F6CF2843A7AE00F162AD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 307421E728410EFD00A2554B /* LevelShoes */;
-			targetProxy = 3036F6CE2843A7AE00F162AD /* PBXContainerItemProxy */;
-		};
 		3074220028410EFE00A2554B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 307421E728410EFD00A2554B /* LevelShoes */;
@@ -666,57 +587,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		3036F6D02843A7AE00F162AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.LevelShoesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "LevelShoesUITests/Home/LevelShoesUITests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LevelShoes;
-			};
-			name = Debug;
-		};
-		3036F6D12843A7AE00F162AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3GN5WJ7SZD;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.renatomateusx.LevelShoesUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "LevelShoesUITests/Home/LevelShoesUITests-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LevelShoes;
-			};
-			name = Release;
-		};
 		3074221028410EFE00A2554B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -936,15 +806,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3036F6D22843A7AE00F162AD /* Build configuration list for PBXNativeTarget "LevelShoesUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3036F6D02843A7AE00F162AD /* Debug */,
-				3036F6D12843A7AE00F162AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		307421E328410EFD00A2554B /* Build configuration list for PBXProject "LevelShoes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
