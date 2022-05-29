@@ -7,16 +7,11 @@ target 'LevelShoes' do
 
   # Pods for LevelShoes
   pod 'Kingfisher', '~> 4.0'
+  pod 'SnapshotTesting', '~> 1.8.1'
 
   target 'LevelShoesTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
-  #target 'LevelShoesUITests' do
-    # Pods for testing
-  #  pod 'SnapshotTesting', '~> 1.8.1'
-  #  pod 'Kingfisher', '~> 4.0'
-  #end
 
 end

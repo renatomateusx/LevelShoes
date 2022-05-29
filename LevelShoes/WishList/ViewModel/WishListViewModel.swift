@@ -17,16 +17,16 @@ class WishListViewModel {
     var favoriteList: Products?
     
     // MARK: - Private Properties
-    let moviesService: WishListServiceProtocol
+    let productsService: WishListServiceProtocol
     var delegate: WishListViewModelDelegate?
     // MARK: - Inits
     
     init(with service: WishListServiceProtocol) {
-        self.moviesService = service
+        self.productsService = service
     }
     
     func fetchData() {
-        moviesService.fetchData() { products in
+        productsService.fetchData() { products in
             self.favoriteList = products
             self.delegate?.onSuccessFetchingProducts(products: products)
         }

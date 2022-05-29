@@ -15,17 +15,17 @@ protocol HomeViewModelDelegate: AnyObject {
 class HomeViewModel {
     
     // MARK: - Private Properties
-    let moviesService: PopularProductsServiceProtocol
+    let productsService: PopularProductsServiceProtocol
     var delegate: HomeViewModelDelegate?
     var favoritedProducts = Utilis.getFavorites()
     // MARK: - Inits
     
     init(with service: PopularProductsServiceProtocol) {
-        self.moviesService = service
+        self.productsService = service
     }
     
     func fetchData() {
-        moviesService.fetchData() { result in
+        productsService.fetchData() { result in
             switch result {
             
             case .success(let products):

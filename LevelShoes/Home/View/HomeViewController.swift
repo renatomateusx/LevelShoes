@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topBookmarkImageView: UIImageView!
     
     // MARK: - Private Properties
-    internal let viewModel = HomeViewModel(with: PopularProductsService())
+    var viewModel = HomeViewModel(with: PopularProductsService())
     var products: Products = []
     var dataProducts: DataProducts?
     

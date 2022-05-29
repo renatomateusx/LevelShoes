@@ -36,6 +36,7 @@
 		308D4F9C2841C74100D05F9A /* PopularProductsServiceMockFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308D4F9B2841C74100D05F9A /* PopularProductsServiceMockFailure.swift */; };
 		308D4F9E2841C7A400D05F9A /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308D4F9D2841C7A400D05F9A /* HomeViewModelTests.swift */; };
 		3099DB482842B9D5007B97F2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3099DB472842B9D5007B97F2 /* HomeViewController.xib */; };
+		30B5B15328443380006B3FFF /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B5B15228443380006B3FFF /* HomeViewControllerTests.swift */; };
 		B6806C7E61CD053691F5AB59 /* Pods_LevelShoesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44BF949D54F0FBB1D8BC3101 /* Pods_LevelShoesTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		308D4F9B2841C74100D05F9A /* PopularProductsServiceMockFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularProductsServiceMockFailure.swift; sourceTree = "<group>"; };
 		308D4F9D2841C7A400D05F9A /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		3099DB472842B9D5007B97F2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		30B5B15228443380006B3FFF /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		44BF949D54F0FBB1D8BC3101 /* Pods_LevelShoesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LevelShoesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B49DB46BC1B576C042B2F92 /* Pods-LevelShoesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LevelShoesUITests.release.xcconfig"; path = "Target Support Files/Pods-LevelShoesUITests/Pods-LevelShoesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6987548CEFF09F8A478F75BC /* Pods-LevelShoes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LevelShoes.release.xcconfig"; path = "Target Support Files/Pods-LevelShoes/Pods-LevelShoes.release.xcconfig"; sourceTree = "<group>"; };
@@ -340,11 +342,36 @@
 		308D4F982841C6E200D05F9A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				308D4F992841C6F900D05F9A /* PopularProductsServiceMockSuccess.swift */,
-				308D4F9B2841C74100D05F9A /* PopularProductsServiceMockFailure.swift */,
-				308D4F9D2841C7A400D05F9A /* HomeViewModelTests.swift */,
+				30B5B15128443357006B3FFF /* View */,
+				30B5B1502844334D006B3FFF /* ViewModel */,
+				30B5B14F28443345006B3FFF /* Service */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		30B5B14F28443345006B3FFF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				308D4F9B2841C74100D05F9A /* PopularProductsServiceMockFailure.swift */,
+				308D4F992841C6F900D05F9A /* PopularProductsServiceMockSuccess.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		30B5B1502844334D006B3FFF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				308D4F9D2841C7A400D05F9A /* HomeViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30B5B15128443357006B3FFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				30B5B15228443380006B3FFF /* HomeViewControllerTests.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DCA10FD729FC9C2F37025D64 /* Pods */ = {
@@ -562,6 +589,7 @@
 				308D4F9C2841C74100D05F9A /* PopularProductsServiceMockFailure.swift in Sources */,
 				308D4F9A2841C6F900D05F9A /* PopularProductsServiceMockSuccess.swift in Sources */,
 				308D4F9E2841C7A400D05F9A /* HomeViewModelTests.swift in Sources */,
+				30B5B15328443380006B3FFF /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
