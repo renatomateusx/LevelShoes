@@ -7,11 +7,36 @@
 
 import Foundation
 
+protocol WishListViewModelDelegate: AnyObject {
+    func onSuccessFetchingProducts(products: Products?)
+}
+
 class WishListViewModel {
-    var favoriteList = Utilis.getFavorites()
     
+    //MARK: - Properties
+    var favoriteList: Products?
     
-    func updateList() {
-        favoriteList = Utilis.getFavorites()
+    // MARK: - Private Properties
+    let moviesService: WishListServiceProtocol
+    var delegate: WishListViewModelDelegate?
+    // MARK: - Inits
+    
+    init(with service: WishListServiceProtocol) {
+        self.moviesService = service
+    }
+    
+    func fetchData() {
+        moviesService.fetchData() { products in
+            self.favoriteList = products
+            self.delegate?.onSuccessFetchingProducts(products: products)
+        }
+    }
+    
+    func isFavoritedProduct(product: Product) -> Bool {
+        if let favorites = favoriteList {
+            return (favorites.first(where: { $0.id == product.id }) != nil)
+        } else {
+            return false
+        }
     }
 }

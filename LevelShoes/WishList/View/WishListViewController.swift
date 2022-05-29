@@ -20,7 +20,7 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Private Properties
-    internal let viewModel = WishListViewModel()
+    internal let viewModel = WishListViewModel(with: WishListService())
     
     // MARK: - Delegate
     var delegate: WishListViewControllerDelegate?
@@ -47,16 +47,26 @@ class WishListViewController: UIViewController {
     }
     
     private func setupData() {
-        if viewModel.favoriteList?.count == 0 {
-            self.tableView.backgroundView = self.getEmptyView()
-        } else {
-            self.showTableView()
-        }
-        titleView.text = "WISHLIST (\(viewModel.favoriteList?.count ?? 0))"
+        viewModel.delegate = self
+        viewModel.fetchData()
     }
     
     @objc func backButtonAction(_ sender: UIButton) {
         self.dismiss(animated: true)
+    }
+}
+
+// MARK: - ViewControllerViewModelDelegate
+extension WishListViewController: WishListViewModelDelegate {
+    func onSuccessFetchingProducts(products: Products?) {
+        DispatchQueue.main.async {
+            if let products = products, products.count == 0 {
+                self.tableView.backgroundView = self.getEmptyView()
+            } else {
+                self.showTableView()
+            }
+            self.titleView.text = "WISHLIST (\(products?.count ?? 0))"
+        }
     }
 }
 
@@ -117,9 +127,8 @@ private extension WishListViewController {
 extension WishListViewController: ProductTableViewCellDelegate {
     func productRemovedFromWhishList(_ product: Product) {
         DispatchQueue.main.async {
-            self.viewModel.updateList()
+            self.viewModel.fetchData()
             self.tableView.reloadData()
-            self.setupData()
             self.showAlert(title: "REMOVED!", message: "Product removed from whishlist")
             self.delegate?.didRemoveFavoriteItem()
         }
