@@ -20,8 +20,8 @@ class WishListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Private Properties
-    internal let viewModel = WishListViewModel(with: WishListService())
-    
+    private let viewModel = WishListViewModel(with: WishListService())
+    private var favoriteList: Products?
     // MARK: - Delegate
     var delegate: WishListViewControllerDelegate?
     
@@ -63,6 +63,7 @@ extension WishListViewController: WishListViewModelDelegate {
             if let products = products, products.count == 0 {
                 self.tableView.backgroundView = self.getEmptyView()
             } else {
+                self.favoriteList = products
                 self.showTableView()
             }
             self.titleView.text = "WISHLIST (\(products?.count ?? 0))"
@@ -82,7 +83,7 @@ extension WishListViewController: UITableViewDelegate {
 extension WishListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let product = self.viewModel.favoriteList?[indexPath.row]
+        let product = favoriteList?[indexPath.row]
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ProductTableViewCell.identifier,
                                                        for: indexPath) as? ProductTableViewCell  else { return  UITableViewCell() }
         cell.setupData(with: product)
@@ -95,7 +96,7 @@ extension WishListViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let result = viewModel.favoriteList?.count ?? 0
+        let result = favoriteList?.count ?? 0
         return result
     }
 }
@@ -140,6 +141,14 @@ private extension WishListViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+    }
+    
+    func isFavoritedProduct(product: Product) -> Bool {
+        if let favorites = favoriteList {
+            return (favorites.first(where: { $0.id == product.id }) != nil)
+        } else {
+            return false
+        }
     }
 }
 

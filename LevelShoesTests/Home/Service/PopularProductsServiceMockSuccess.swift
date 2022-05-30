@@ -36,7 +36,15 @@ extension PopularProductsServiceMockSuccess {
                     name: "City backpack",
                     price: 4700,
                     originalPrice: 6000,
-                    badges: [])
+                    badges: []),
+            Product(id: "7",
+                    sku: "BBU023B176105",
+                    image: "https://i.imgur.com/nZkuhr9m.jpg",
+                    brand: "GIVENCHY",
+                    name: "Mini 4G vertical crossbody bag",
+                    price: 3800,
+                    originalPrice: nil,
+                    badges: ["NEW"])
         ]
     }
 }

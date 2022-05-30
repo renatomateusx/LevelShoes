@@ -190,9 +190,9 @@
             filePath = "LevelShoes/Resources/Utilis/Utilis.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "addToCart(product:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "getCanceledPrice(priceText:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -247,16 +247,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D1C19A3-0455-4256-B109-8AE7E05DC0F8"
-            shouldBeEnabled = "Yes"
+            uuid = "7214EB71-4268-4658-BF9D-823B2206BC3F"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LevelShoesTests/Home/Service/PopularProductsServiceMockSuccess.swift"
+            filePath = "LevelShoes/Home/View/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "fetchData(completion:)"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "onSuccessFetchingProducts(products:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA135577-93FD-45B1-BC1C-3D32B37DE4C2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LevelShoes/WishList/View/WishListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "productRemovedFromWhishList(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

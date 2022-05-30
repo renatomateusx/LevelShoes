@@ -13,9 +13,6 @@ protocol WishListViewModelDelegate: AnyObject {
 
 class WishListViewModel {
     
-    //MARK: - Properties
-    var favoriteList: Products?
-    
     // MARK: - Private Properties
     let productsService: WishListServiceProtocol
     var delegate: WishListViewModelDelegate?
@@ -27,16 +24,7 @@ class WishListViewModel {
     
     func fetchData() {
         productsService.fetchData() { products in
-            self.favoriteList = products
             self.delegate?.onSuccessFetchingProducts(products: products)
-        }
-    }
-    
-    func isFavoritedProduct(product: Product) -> Bool {
-        if let favorites = favoriteList {
-            return (favorites.first(where: { $0.id == product.id }) != nil)
-        } else {
-            return false
         }
     }
 }

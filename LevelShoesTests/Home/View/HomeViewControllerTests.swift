@@ -33,8 +33,10 @@ class HomeViewControllerTestes: XCTestCase {
     }
     
     func testInitialState() {
-        XCTAssertEqual(viewController.products.count, 2)
-        assertSnapshot(matching: viewController, as: .image)
+        sleep(3)
+        XCTAssertEqual(viewController.products.count, 3)
+        XCTAssertEqual(viewController.topTitleLabel.text, "NEW IN")
+        assertSnapshot(matching: viewController, as: .image(precision: 0.99))
     }
 
 }

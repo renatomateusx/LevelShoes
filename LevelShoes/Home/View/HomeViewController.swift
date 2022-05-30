@@ -54,10 +54,6 @@ extension HomeViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-    
-    @objc func done() { // remove @objc for Swift 3
-
-    }
 }
 
 // MARK: - SetupData
@@ -72,20 +68,18 @@ extension HomeViewController {
 // MARK: - ViewControllerViewModelDelegate
 extension HomeViewController: HomeViewModelDelegate {
     func onSuccessFetchingProducts(products: DataProducts) {
+        self.dataProducts = products
+        if let results = products.items {
+            self.products = results
+        }
         DispatchQueue.main.async {
-            self.dataProducts = products
-            if let results = products.items {
-                self.products = results
-            }
             self.topTitleLabel.text = self.dataProducts?.title
             self.showCollectionView()
         }
     }
     
     func onFailureFetchingProducts(error: Error) {
-        DispatchQueue.main.async {
-            self.collectionView.backgroundView = self.getEmptyView()
-        }
+        self.collectionView.backgroundView = self.getEmptyView()
     }
     
     func setupNavigationToWishList() {

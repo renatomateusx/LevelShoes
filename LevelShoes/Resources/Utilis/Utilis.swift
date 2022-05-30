@@ -73,8 +73,14 @@ extension Utilis {
     }
     
     static func getPrice(price: Int) -> String {
-        let result = NumberFormatter.localizedString(from: price as NSNumber, number: .currency)
-        return "\(result) AED"
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "ar_AE")
+        formatter.numberStyle = .decimal
+        if let result = formatter.string(from: price as NSNumber) {
+            return "\(result) AED"
+        } else {
+            return ""
+        }
     }
     
     static func getCanceledPrice(priceText: String) -> NSAttributedString? {
