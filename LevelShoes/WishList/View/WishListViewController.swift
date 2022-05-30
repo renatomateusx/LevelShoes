@@ -129,7 +129,6 @@ extension WishListViewController: ProductTableViewCellDelegate {
     func productRemovedFromWhishList(_ product: Product) {
         DispatchQueue.main.async {
             self.viewModel.fetchData()
-            self.tableView.reloadData()
             self.showAlert(title: "REMOVED!", message: "Product removed from whishlist")
             self.delegate?.didRemoveFavoriteItem()
         }
