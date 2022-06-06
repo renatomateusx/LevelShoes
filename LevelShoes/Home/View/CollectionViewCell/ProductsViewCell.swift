@@ -31,7 +31,6 @@ extension ProductsViewCell {
     func setupUI() {
         productContentView.clipsToBounds = true
         productContentView.layer.masksToBounds = false
-//        productContentView.backgroundColor = .clear
     }
     
     func setupData(with product: Product) {

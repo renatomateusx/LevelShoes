@@ -59,12 +59,10 @@ class WishListViewController: UIViewController {
 // MARK: - ViewControllerViewModelDelegate
 extension WishListViewController: WishListViewModelDelegate {
     func onSuccessFetchingProducts(products: Products?) {
+        self.favoriteList = products
         if let products = products, products.count == 0 {
-            DispatchQueue.main.async {
-                self.tableView.backgroundView = self.getEmptyView()
-            }
+            self.getEmptyView()
         } else {
-            self.favoriteList = products
             self.showTableView()
         }
         self.titleView.text = "WISHLIST (\(products?.count ?? 0))"
@@ -103,18 +101,22 @@ extension WishListViewController: UITableViewDataSource {
 
 // MARK: - Helpers
 private extension WishListViewController {
-    func getEmptyView() -> UIView {
+    func getEmptyView() {
         let labelDescription: UILabel = UILabel()
         labelDescription.font = .systemFont(ofSize: 20, weight: .regular)
         labelDescription.textColor = UIColor.darkGray
         labelDescription.numberOfLines = 0
         labelDescription.textAlignment = .center
-        labelDescription.text = "You don't have any favorite products yet."
+        labelDescription.text = "You don't have favorite products yet."
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         labelDescription.sizeToFit()
         labelDescription.heightAnchor.constraint(equalToConstant: 400).isActive = true
+        labelDescription.widthAnchor.constraint(equalToConstant: self.tableView.frame.width).isActive = true
         
-        return labelDescription
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            self.tableView.backgroundView = labelDescription
+        }
     }
     
     func showTableView() {
