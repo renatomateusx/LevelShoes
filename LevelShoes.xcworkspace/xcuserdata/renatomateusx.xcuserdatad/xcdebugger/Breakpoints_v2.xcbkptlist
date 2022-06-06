@@ -110,8 +110,8 @@
             filePath = "LevelShoes/Home/View/CollectionViewCell/ProductsViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "setupData(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,8 +126,8 @@
             filePath = "LevelShoes/Home/View/CollectionViewCell/ProductsViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "setupData(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "LevelShoes/Home/View/CollectionViewCell/ProductsViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "favoriteProduct(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "LevelShoes/Home/View/CollectionViewCell/ProductsViewCell.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "setupFavoriteAction()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,39 +206,39 @@
             filePath = "LevelShoes/WishList/View/WishListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "onSuccessFetchingProducts(products:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "6500B2D6-9AEE-457F-87D5-3DC15947752B - fcc57411fd3b4d1f"
+                  uuid = "6500B2D6-9AEE-457F-87D5-3DC15947752B - d0a150e3fcaf0774"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in LevelShoes.WishListViewController.onSuccessFetchingProducts(products: Swift.Optional&lt;Swift.Array&lt;LevelShoes.Product&gt;&gt;) -&gt; ()"
+                  symbolName = "LevelShoes.WishListViewController.onSuccessFetchingProducts(products: Swift.Optional&lt;Swift.Array&lt;LevelShoes.Product&gt;&gt;) -&gt; ()"
                   moduleName = "LevelShoes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/renatomateusx/Documents/RenatoProjects/LevelShoes/LevelShoes/WishList/View/WishListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
                   offsetFromSymbolStart = "88">
                </Location>
                <Location
-                  uuid = "6500B2D6-9AEE-457F-87D5-3DC15947752B - fcc57411fd3b4d1f"
+                  uuid = "6500B2D6-9AEE-457F-87D5-3DC15947752B - d0a150e3fcaf0774"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in LevelShoes.WishListViewController.onSuccessFetchingProducts(products: Swift.Optional&lt;Swift.Array&lt;LevelShoes.Product&gt;&gt;) -&gt; ()"
+                  symbolName = "LevelShoes.WishListViewController.onSuccessFetchingProducts(products: Swift.Optional&lt;Swift.Array&lt;LevelShoes.Product&gt;&gt;) -&gt; ()"
                   moduleName = "LevelShoes"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/renatomateusx/Documents/RenatoProjects/LevelShoes/LevelShoes/WishList/View/WishListViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
                   offsetFromSymbolStart = "116">
                </Location>
             </Locations>
@@ -263,16 +263,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CA135577-93FD-45B1-BC1C-3D32B37DE4C2"
+            uuid = "377CE40A-617D-4B66-9765-A6C8AFE29F05"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LevelShoes/WishList/View/WishListViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
-            landmarkName = "productRemovedFromWhishList(_:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E34D888C-B2FC-4544-AE81-25DAFBFEF488"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LevelShoes/WishList/View/WishListViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "showTableView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

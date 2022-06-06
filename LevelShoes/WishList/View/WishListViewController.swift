@@ -59,15 +59,15 @@ class WishListViewController: UIViewController {
 // MARK: - ViewControllerViewModelDelegate
 extension WishListViewController: WishListViewModelDelegate {
     func onSuccessFetchingProducts(products: Products?) {
-        DispatchQueue.main.async {
-            if let products = products, products.count == 0 {
+        if let products = products, products.count == 0 {
+            DispatchQueue.main.async {
                 self.tableView.backgroundView = self.getEmptyView()
-            } else {
-                self.favoriteList = products
-                self.showTableView()
             }
-            self.titleView.text = "WISHLIST (\(products?.count ?? 0))"
+        } else {
+            self.favoriteList = products
+            self.showTableView()
         }
+        self.titleView.text = "WISHLIST (\(products?.count ?? 0))"
     }
 }
 
@@ -127,11 +127,9 @@ private extension WishListViewController {
 
 extension WishListViewController: ProductTableViewCellDelegate {
     func productRemovedFromWhishList(_ product: Product) {
-        DispatchQueue.main.async {
-            self.viewModel.fetchData()
-            self.showAlert(title: "REMOVED!", message: "Product removed from whishlist")
-            self.delegate?.didRemoveFavoriteItem()
-        }
+        self.showAlert(title: "REMOVED!", message: "Product removed from whishlist")
+        self.viewModel.fetchData()
+        self.delegate?.didRemoveFavoriteItem()
     }
 }
 

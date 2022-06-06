@@ -93,6 +93,7 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="XsA-6x-mKU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="G2x-gh-AJ5"/>
                 <constraint firstItem="XsA-6x-mKU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="JEG-xo-qeJ"/>
