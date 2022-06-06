@@ -23,7 +23,8 @@ class WishListViewModel {
     }
     
     func fetchData() {
-        productsService.fetchData() { products in
+        productsService.fetchData() { [weak self] products in
+            guard let self = self else { return }
             self.delegate?.onSuccessFetchingProducts(products: products)
         }
     }
